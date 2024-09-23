@@ -1,0 +1,101 @@
+p {
+  font-family: Lato;
+}
+/* General styling for the application */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue background for a calm look */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50; /* Darker shade for headers */
+}
+
+p {
+  color: #34495e;
+}
+
+/* Styling for the seat layout */
+.coach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Styling for each row of seats */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Styling for seat buttons */
+button {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Available seats */
+button:not(.booked) {
+  background-color: #2ecc71; /* Green for available seats */
+  color: white;
+}
+
+/* Hover effect for available seats */
+button:not(.booked):hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Booked seats */
+button.booked {
+  background-color: #e74c3c; /* Red for booked seats */
+  color: white;
+  cursor: not-allowed; /* Indicate that these seats are not selectable */
+}
+
+/* Styling for the booking input and button */
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 3px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #3498db; /* Blue for action buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for action buttons */
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Disabled booking button if all seats are booked */
+button:disabled {
+  background-color: #95a5a6; /* Grey for disabled state */
+  cursor: not-allowed;
+}
+
+/* Footer styling for remaining seats display */
+.remaining-seats {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #8e44ad; /* Purple for remaining seats count */
+}
